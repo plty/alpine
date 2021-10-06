@@ -1,5 +1,5 @@
-import component from "../src/index.js";
+import template from "../src/index.js";
 
 document.addEventListener("alpine:init", () => {
-    window.Alpine.plugin(component);
+    window.Alpine.plugin(template);
 });

@@ -6,20 +6,16 @@
     ></script>
 
     <template x-data x-template:counter>
-        <div>
-            <button @click="count += 3">Increment</button>
-            <span x-text="count"></span>
-        </div>
+        <template x-if="true">
+            <div>
+                <button @click="count++">Increment</button>
+                <span x-text="count"></span>
+            </div>
+        </template>
     </template>
 
     <div x-data="{ count: 0 }">
         <x-counter />
         <x-counter />
-    </div>
-    <!-- Play around. -->
-    <div x-data="{ open: false }">
-        <button @click="open = !open">Toggle</button>
-
-        <span x-show="open"> Content... </span>
     </div>
 </html>
