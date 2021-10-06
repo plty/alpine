@@ -1,18 +1,25 @@
 <html>
-    <script src="./packages/intersect/dist/cdn.js" defer></script>
-    <script src="./packages/morph/dist/cdn.js" defer></script>
-    <script src="./packages/history/dist/cdn.js"></script>
-    <script src="./packages/persist/dist/cdn.js"></script>
-    <script src="./packages/trap/dist/cdn.js"></script>
-    <script src="./packages/alpinejs/dist/cdn.js" defer></script>
-    <!-- <script src="https://unpkg.com/alpinejs@3.0.0/dist/cdn.min.js" defer></script> -->
+    <script src="./packages/weisshorn/dist/cdn.js" defer></script>
+    <script
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+        defer
+    ></script>
 
+    <template x-data x-template:counter>
+        <div>
+            <button @click="count += 3">Increment</button>
+            <span x-text="count"></span>
+        </div>
+    </template>
+
+    <div x-data="{ count: 0 }">
+        <x-counter />
+        <x-counter />
+    </div>
     <!-- Play around. -->
     <div x-data="{ open: false }">
         <button @click="open = !open">Toggle</button>
 
-        <span x-show="open">
-            Content...
-        </span>
+        <span x-show="open"> Content... </span>
     </div>
 </html>
