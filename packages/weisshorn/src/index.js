@@ -1,12 +1,14 @@
-export default function(Alpine) {
-    Alpine.directive("template", (el, { value: name }, { }) => {
+export default function (Alpine) {
+    Alpine.directive("template", (el, { value: name }, {}) => {
         customElements.define(
             `x-${name}`,
             class extends HTMLElement {
                 constructor() {
                     super();
-                    const template = el.content.cloneNode(true);
-                    this.appendChild(template);
+                    const content = el.content;
+                    Alpine.mutateDom(() =>
+                        this.appendChild(content.cloneNode(true))
+                    );
                 }
             }
         );

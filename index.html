@@ -6,12 +6,8 @@
     ></script>
 
     <template x-data x-template:counter>
-        <template x-if="true">
-            <div>
-                <button @click="count++">Increment</button>
-                <span x-text="count"></span>
-            </div>
-        </template>
+        <button @click="count++">Increment</button>
+        <span x-text="count"></span>
     </template>
 
     <div x-data="{ count: 0 }">
