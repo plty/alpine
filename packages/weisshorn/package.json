@@ -1,8 +1,8 @@
 {
     "name": "@plty/weisshorn",
-    "version": "3.4.2",
-    "description": "Trigger JavaScript when an element enters the viewport",
-    "author": "Caleb Porzio",
+    "version": "0.0.1",
+    "description": "Minimal reusable component for Alpine.js",
+    "author": "Jerrell Ezralemuel",
     "license": "MIT",
     "main": "dist/module.cjs.js",
     "module": "dist/module.esm.js",
